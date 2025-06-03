@@ -1,0 +1,591 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:plovdiv="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#hasInterest -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#hasInterest">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest"/>
+        <rdfs:comment>Connects a TourLocation to an Interest like History, Art, or Food.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#isInNeighborhood -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#isInNeighborhood">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Neighborhood"/>
+        <rdfs:comment>Specifies which part of Plovdiv the TourLocation is in.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#partOfTour -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#partOfTour">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourRecommendation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <rdfs:comment>Indicates which TourLocations are part of a recommended Tour.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#suitableForMobility -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#suitableForMobility">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#MobilityOption"/>
+        <rdfs:comment>States if the location is suitable for walking, car, or accessible options.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#hasDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A short description shown in the tour guide app.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#hasName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The display name of the tour location.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#hasVisitDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#hasVisitDuration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Estimated time (in minutes) needed to visit this location.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest">
+        <rdfs:comment>Represents user interests like History, Art, Food, or Nature.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#MobilityOption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#MobilityOption">
+        <rdfs:comment>Represents transportation or accessibility options like walking, car, or accessible paths.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Neighborhood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Neighborhood">
+        <rdfs:comment>Represents a district or area within Plovdiv, such as Kapana or Old Town.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation">
+        <rdfs:comment>Represents a point of interest in Plovdiv, such as a museum, ruin, or district.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourRecommendation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourRecommendation">
+        <rdfs:comment>Represents a suggested tour route made up of one or more TourLocations</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Accessible -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Accessible">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#MobilityOption"/>
+        <rdfs:comment>Suitable for people with mobility impairments (e.g., wheelchairs).</rdfs:comment>
+        <rdfs:label>Accessible</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#AncientTheater -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#AncientTheater">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#History"/>
+        <plovdiv:isInNeighborhood rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#OldTown"/>
+        <plovdiv:suitableForMobility rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Walking"/>
+        <plovdiv:hasDescription>A Roman-era amphitheater used for performances, located in the Old Town.</plovdiv:hasDescription>
+        <plovdiv:hasName>Ancient Theater</plovdiv:hasName>
+        <plovdiv:hasVisitDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</plovdiv:hasVisitDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Architecture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Architecture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest"/>
+        <rdfs:comment>Highlights architectural landmarks and buildings.</rdfs:comment>
+        <rdfs:label>Architecture</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Art -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Art">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest"/>
+        <rdfs:comment>Includes galleries, street art, and exhibitions.</rdfs:comment>
+        <rdfs:label>Art</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Bicycle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Bicycle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#MobilityOption"/>
+        <rdfs:comment>Reachable or convenient via bicycle.</rdfs:comment>
+        <rdfs:label>Bicycle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Car -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Car">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#MobilityOption"/>
+        <rdfs:comment>Accessible by car or private transport.</rdfs:comment>
+        <rdfs:label>Car</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Center -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Center">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Neighborhood"/>
+        <rdfs:comment>Main commercial and administrative area.</rdfs:comment>
+        <rdfs:label>Center</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#CityArtGallery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#CityArtGallery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Art"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Culture"/>
+        <plovdiv:isInNeighborhood rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Center"/>
+        <plovdiv:suitableForMobility rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Accessible"/>
+        <plovdiv:hasDescription>Gallery with classical and modern Bulgarian artwork collections.</plovdiv:hasDescription>
+        <plovdiv:hasName>City Art Gallery</plovdiv:hasName>
+        <plovdiv:hasVisitDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35</plovdiv:hasVisitDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Culture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Culture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest"/>
+        <rdfs:comment>General cultural significance, museums, and events.</rdfs:comment>
+        <rdfs:label>Culture</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#EthnographicMuseum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#EthnographicMuseum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Art"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Culture"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#History"/>
+        <plovdiv:isInNeighborhood rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#OldTown"/>
+        <plovdiv:suitableForMobility rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Walking"/>
+        <plovdiv:hasDescription>Traditional museum showcasing Bulgarian culture and crafts.</plovdiv:hasDescription>
+        <plovdiv:hasName>Ethnographic Museum</plovdiv:hasName>
+        <plovdiv:hasVisitDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</plovdiv:hasVisitDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Family -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Family">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest"/>
+        <rdfs:comment>Suitable for children or families with kids.</rdfs:comment>
+        <rdfs:label>Family-friendly</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Food -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Food">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest"/>
+        <rdfs:comment>Focuses on culinary experiences and local cuisine.</rdfs:comment>
+        <rdfs:label>Food</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#HemingwayCafe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#HemingwayCafe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Culture"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Food"/>
+        <plovdiv:isInNeighborhood rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Center"/>
+        <plovdiv:suitableForMobility rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Accessible"/>
+        <plovdiv:hasDescription>A cozy literary café offering local food and wine.</plovdiv:hasDescription>
+        <plovdiv:hasName>Hemingway Café</plovdiv:hasName>
+        <plovdiv:hasVisitDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</plovdiv:hasVisitDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#History -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#History">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest"/>
+        <rdfs:comment>Covers historical themes and locations.</rdfs:comment>
+        <rdfs:label>History</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#HristoBotev -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#HristoBotev">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Neighborhood"/>
+        <rdfs:comment>Residential area east of the railway station.</rdfs:comment>
+        <rdfs:label>Hristo Botev</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Kamenitsa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Kamenitsa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Neighborhood"/>
+        <rdfs:comment>Neighborhood split into I and II; historic and residential mix.</rdfs:comment>
+        <rdfs:label>Kamenitsa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Kapana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Kapana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Neighborhood"/>
+        <rdfs:comment>Trendy district full of art, cafés, and boutiques.</rdfs:comment>
+        <rdfs:label>Kapana</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#KapanaArtDistrict -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#KapanaArtDistrict">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Art"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Food"/>
+        <plovdiv:isInNeighborhood rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Kapana"/>
+        <plovdiv:suitableForMobility rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Walking"/>
+        <plovdiv:hasDescription>A lively area filled with art galleries, cafés, and creative spaces.</plovdiv:hasDescription>
+        <plovdiv:hasName>Kapana Art District</plovdiv:hasName>
+        <plovdiv:hasVisitDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</plovdiv:hasVisitDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Karshiaka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Karshiaka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Neighborhood"/>
+        <rdfs:comment>Northern district across the Maritsa River, mix of old and new.</rdfs:comment>
+        <rdfs:label>Karshiaka</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#KyuchukParis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#KyuchukParis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Neighborhood"/>
+        <rdfs:comment>Densely populated area in the southern part of Plovdiv.</rdfs:comment>
+        <rdfs:label>Kyuchuk Paris</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Marasha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Marasha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Neighborhood"/>
+        <rdfs:comment>Residential neighborhood with green spaces.</rdfs:comment>
+        <rdfs:label>Marasha</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Music -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Music">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest"/>
+        <rdfs:comment>Includes live music venues and festivals.</rdfs:comment>
+        <rdfs:label>Music</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Nature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Nature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest"/>
+        <rdfs:comment>Includes parks, hills, and scenic views.</rdfs:comment>
+        <rdfs:label>Nature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#NebetTepe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#NebetTepe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#History"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Nature"/>
+        <plovdiv:isInNeighborhood rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#OldTown"/>
+        <plovdiv:suitableForMobility rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Walking"/>
+        <plovdiv:hasDescription>One of Plovdiv’s oldest settlements with panoramic views.</plovdiv:hasDescription>
+        <plovdiv:hasName>Nebet Tepe</plovdiv:hasName>
+        <plovdiv:hasVisitDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</plovdiv:hasVisitDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Nightlife -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Nightlife">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest"/>
+        <rdfs:comment>Covers bars, clubs, and evening entertainment.</rdfs:comment>
+        <rdfs:label>Nightlife</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#OldTown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#OldTown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Neighborhood"/>
+        <rdfs:comment>Historic area with Roman ruins and cobbled streets.</rdfs:comment>
+        <rdfs:label>Old Town</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#PublicTransport -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#PublicTransport">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#MobilityOption"/>
+        <rdfs:comment>Easy to access by bus,</rdfs:comment>
+        <rdfs:label>Public Transport</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Religion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Religion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest"/>
+        <rdfs:comment>Features churches, mosques, and religious heritage.</rdfs:comment>
+        <rdfs:label>Religion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#RomanStadium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#RomanStadium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Architecture"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#History"/>
+        <plovdiv:isInNeighborhood rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Center"/>
+        <plovdiv:suitableForMobility rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Accessible"/>
+        <plovdiv:hasDescription>Remains of a large Roman stadium, partially visible under the main street.</plovdiv:hasDescription>
+        <plovdiv:hasName>Roman Stadium</plovdiv:hasName>
+        <plovdiv:hasVisitDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</plovdiv:hasVisitDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#RowingCanal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#RowingCanal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Nature"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Sport"/>
+        <plovdiv:isInNeighborhood rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Smirnenski"/>
+        <plovdiv:suitableForMobility rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Bicycle"/>
+        <plovdiv:suitableForMobility rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Walking"/>
+        <plovdiv:hasDescription>Sports and recreation area with walking paths, greenery, and a canal.</plovdiv:hasDescription>
+        <plovdiv:hasName>Plovdiv Rowing Canal</plovdiv:hasName>
+        <plovdiv:hasVisitDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</plovdiv:hasVisitDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Shopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Shopping">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest"/>
+        <rdfs:comment>Centers on stores, crafts, and local products.</rdfs:comment>
+        <rdfs:label>Shopping</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Smirnenski -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Smirnenski">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Neighborhood"/>
+        <rdfs:comment>Western area with new developments and proximity to the Rowing Canal.</rdfs:comment>
+        <rdfs:label>Smirnenski</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Sport -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Sport">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Interest"/>
+        <rdfs:comment>Covers places suitable for sporting activities</rdfs:comment>
+        <rdfs:label>Sport</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#StMarinaChurch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#StMarinaChurch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Architecture"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Religion"/>
+        <plovdiv:isInNeighborhood rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#OldTown"/>
+        <plovdiv:suitableForMobility rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Walking"/>
+        <plovdiv:hasDescription>Historic Eastern Orthodox church with a beautiful wooden bell tower.</plovdiv:hasDescription>
+        <plovdiv:hasName>St. Marina Church</plovdiv:hasName>
+        <plovdiv:hasVisitDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</plovdiv:hasVisitDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Trakia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Trakia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Neighborhood"/>
+        <rdfs:comment>A large residential area with parks and shopping centers.</rdfs:comment>
+        <rdfs:label>Trakia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TsarSimeonGarden -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TsarSimeonGarden">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#TourLocation"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Family"/>
+        <plovdiv:hasInterest rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Nature"/>
+        <plovdiv:isInNeighborhood rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Center"/>
+        <plovdiv:suitableForMobility rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Accessible"/>
+        <plovdiv:hasDescription>Popular city park with fountains, greenery, and the Singing Fountains.</plovdiv:hasDescription>
+        <plovdiv:hasName>Tsar Simeon Garden</plovdiv:hasName>
+        <plovdiv:hasVisitDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</plovdiv:hasVisitDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Walking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#Walking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/5/plovdiv#MobilityOption"/>
+        <rdfs:comment>Suitable for visitors on foot.</rdfs:comment>
+        <rdfs:label>Walking</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
